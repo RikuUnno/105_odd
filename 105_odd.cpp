@@ -2,13 +2,15 @@
 
 using namespace std;
 
+const int N = 200;
+
 int main()
 {
     int oddN = 0;
     int divisorsCount = 0;
     int count = 0;
 
-    for (int j = 1; j <= 200; j += 2)
+    for (int j = 1; j <= N; j += 2)
     {
         oddN = j;
         divisorsCount = 0;
@@ -17,7 +19,6 @@ int main()
             if (oddN % i == 0)
             {
                 divisorsCount++;
-                cout << oddN << "の約数：" << i << endl;
             }
         }
 
@@ -26,7 +27,6 @@ int main()
         if (divisorsCount == 8)
         {
             count++;
-            cout << "j = " << j << endl;
         }
 
         cout << endl;
